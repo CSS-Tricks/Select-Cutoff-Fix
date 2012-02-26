@@ -20,7 +20,7 @@
 					el = $(this);
 					el.data("origWidth", el.outerWidth()) // IE 8 will take padding on selects
 				})
-			  .mouseenter(function(){
+			  .on('mouseenter focus', function(){
 			    $(this).css("width", "auto");
 			  })
 			  .bind("blur change", function(){
