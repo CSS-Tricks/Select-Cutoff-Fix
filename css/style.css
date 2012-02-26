@@ -1,0 +1,36 @@
+/*
+	 CSS-Tricks Example
+	 by Chris Coyier
+	 http://css-tricks.com
+*/
+
+* { margin: 0; padding: 0; }
+body { font: 14px Georgia, serif; background: #444; }
+
+article, aside, figure, footer, header, hgroup,
+menu, nav, section { display: block; }
+
+#page-wrap { 
+	width: 150px; 
+	margin: 0 auto; 
+	background: white; 
+	padding: 200px 0; 
+}
+
+select {
+	width: 150px;
+	padding: 5px;
+	margin: 0 0 20px 0;
+}
+
+h1, h2 {
+	font: bold 16px Sans-Serif;
+	margin: 0 0 10px 0;
+	padding: 0 10px;
+}
+
+h1 {
+	font-size: 30px;
+	margin: 0 0 20px 0;
+	color: red;
+}

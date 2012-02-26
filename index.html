@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='UTF-8'>
+	
+	<title>Select Cutoff Fix</title>
+	
+	<link rel='stylesheet' href='css/style.css'>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<!--[if lt IE 9]>
+	<script>
+		$(function() {
+		
+			var el;
+			
+			$("select.fix-me")
+				.each(function() {
+					el = $(this);
+					el.data("origWidth", el.outerWidth()) // IE 8 will take padding on selects
+				})
+			  .mouseenter(function(){
+			    $(this).css("width", "auto");
+			  })
+			  .bind("blur change", function(){
+			  	el = $(this);
+			    el.css("width", el.data("origWidth"));
+			  });
+		
+		});
+	</script>
+	<![endif]-->
+</head>
+
+<body>
+
+	<div id="page-wrap">
+		
+		<h1>Select Cutoff Fix</h1>
+		
+		<h2>Busted in IE 7/8</h2>
+		
+		<select>
+			<option value="%5B139%5D+White+Mesh+-+%24119.99">[139] White Mesh - $119.99</option>
+			<option value="%5B169%5D+Black+Mesh++-+%24119.99">[169] Black Mesh  - $119.99</option>
+			<option value="%5B149%5D+SafeRail+-+White+Mesh+-+%24125.99">[149] SafeRail - White Mesh - $125.99</option>
+			<option value="%5B179%5D+SafeRail+-+Black+Mesh+-+%24125.99">[179] SafeRail - Black Mesh - $125.99</option>
+		</select>
+		
+		<h2>Fixed</h2>
+		
+		<select class="fix-me">
+			<option value="%5B139%5D+White+Mesh+-+%24119.99">[139] White Mesh - $119.99</option>
+			<option value="%5B169%5D+Black+Mesh++-+%24119.99">[169] Black Mesh  - $119.99</option>
+			<option value="%5B149%5D+SafeRail+-+White+Mesh+-+%24125.99">[149] SafeRail - White Mesh - $125.99</option>
+			<option value="%5B179%5D+SafeRail+-+Black+Mesh+-+%24125.99">[179] SafeRail - Black Mesh - $125.99</option>
+		</select>
+	
+	</div>
+	
+</body>
+
+</html>
